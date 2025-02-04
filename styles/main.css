@@ -4,14 +4,32 @@
     padding: 0;
 }
 
+html {
+    background-color: lightsteelblue;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    max-width: 1000px;
+    border: 3px solid steelblue;
+    margin: 0 auto;
+    width:100%;
+    box-shadow: 5px 5px 12px 5px gray;
+    background-color: white;
 }
 
 header {
     display: flex;
     align-items: center;
+    border-bottom: 3px ridge steelblue;
+    background-image: linear-gradient(to right, white,steelblue);
+    padding: 1em;
+}
+
+header img {
+    padding-right: 1em;
+    /* keep side padding flexible since it can change with diff. screens */
 }
 
 header h2 {
@@ -24,12 +42,55 @@ header h2 {
 
 }
 
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+section{
+    max-width: 65%;
+}
+
+p, blockquote{
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
 p {
     margin-bottom: 12px;
+    padding: 0 1.5rem;
+}
+
+blockquote{
+    margin: 0 4em 20px;
+    border-left: 10px solid steelblue;
+    padding: 15px 1em;
+    background-color: wheat;
 }
 
 h2, h3 {
     margin-bottom: 15px;
+}
+.offer {
+    padding-left: 1.5rem;
+}
+
+.pageheader {
+    text-align: center;
+    padding-top: 20px;
+}
+
+section h3 {
+    padding-left: 1.5rem;
+}
+
+aside h2{
+    padding-left: 1.5rem;
+    padding-top: 20px;
+}
+
+aside ul {
+    padding-left: 3rem;
 }
 
 aside a{
@@ -58,9 +119,13 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2em 0;
+    background-color: steelblue;
+    border-top: 3px ridge steelblue;
+    margin-top: 20px;
 }
 
 footer p {
     font-size: 80%;
     font-variant: small-caps;
+    color: white;
 }
