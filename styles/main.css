@@ -11,7 +11,7 @@ html {
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    max-width: 1000px;
+    max-width: 1200px;
     border: 3px solid steelblue;
     margin: 0 auto;
     width:100%;
@@ -67,6 +67,7 @@ header h2 {
     font-weight: bold;
     color: white;
     background-color: steelblue;
+    transition: all ease-in-out 300ms;
 }
 
 #nav_menu ul ul {
@@ -108,21 +109,24 @@ header h2 {
 
 #nav_list li {
     width: 100%;
-    border: 3px solid steelblue;
-    border-radius: 5px;
+    /* border: 3px solid steelblue;
+    border-radius: 15px; */
 }
 
 #nav_list a {
     display: block;
     text-decoration: none;
-    background-color: lightsteelblue;
-    color:black;
-    padding: .5em;
+    background-color: steelblue;
+    color:white;
+    padding: .25em;
+    transition: all ease-in-out 300ms;
+    /* border: 3px solid steelblue; */
+    border-radius: 15px;
 }
 
 #nav_list a:hover {
-    color: white;
-    background-color: steelblue;
+    color: black;
+    background-color: lightsteelblue;
 }
 
 main {
@@ -131,7 +135,12 @@ main {
 }
 
 section{
-    max-width: 65%;
+    flex: 0 1 50%;
+}
+
+aside {
+    flex: 0 1 25%;
+    /* flex: grow shrink basis */
 }
 
 p, blockquote{
@@ -158,9 +167,14 @@ h2, h3 {
     padding-left: 1.5rem;
 }
 
-.pageheader {
+.pagetop {
     text-align: center;
     padding-top: 20px;
+    font-size: 300%;
+    font-variant: small-caps;
+    color: lightsteelblue;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
+    /* shadow: horizontal vertical blur color, same on other side of text, ... */
 }
 
 section h3 {
@@ -169,7 +183,9 @@ section h3 {
 
 aside h2{
     padding-left: 1.5rem;
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    text-align: center;
+    color: maroon;
 }
 
 aside ul {
@@ -179,6 +195,25 @@ aside ul {
 aside a{
     font-weight: bold;
     line-height: 1.5;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    padding-top: 20px;
+}
+
+article img {
+    max-width: 250px;
+    border: 3px double steelblue;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px gray;
+}
+
+section div {
+    display: flex;
 }
 
 /* the section tab makes the link charactersitics only apply to the text under the section tags in index>main */
