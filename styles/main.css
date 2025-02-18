@@ -108,7 +108,8 @@ header h2 {
 }
 
 #nav_list li {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     /* border: 3px solid steelblue;
     border-radius: 15px; */
 }
@@ -143,6 +144,10 @@ aside {
     /* flex: grow shrink basis */
 }
 
+#thirdcol h4 {
+    padding-left: .5rem;
+}
+
 p, blockquote{
     margin-bottom: 12px;
     line-height: 1.5;
@@ -150,7 +155,8 @@ p, blockquote{
 
 p {
     margin-bottom: 12px;
-    padding: 0 1.5rem;
+    padding: .75rem;
+
 }
 
 blockquote{
@@ -160,7 +166,7 @@ blockquote{
     background-color: wheat;
 }
 
-h2, h3 {
+h2 {
     margin-bottom: 15px;
 }
 .offer {
@@ -178,18 +184,14 @@ h2, h3 {
 }
 
 section h3 {
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
 }
 
 aside h2{
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
     /* padding-top: 20px; */
     text-align: center;
     color: maroon;
-}
-
-aside ul {
-    padding-left: 3rem;
 }
 
 aside a{
@@ -214,6 +216,9 @@ article img {
 
 section div {
     display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    gap: .75rem;
 }
 
 /* the section tab makes the link charactersitics only apply to the text under the section tags in index>main */
@@ -246,4 +251,60 @@ footer p {
     font-size: 80%;
     font-variant: small-caps;
     color: white;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+/* whatever rule blocks come last take precedence over previous, then we want it to check width of screen */
+/* ************************** */
+/* ***** MEDIA QUIERIES ***** */
+/* ************************** */
+
+/* for a tablet: */
+@media only screen and (max-width: 900px) {
+    body{
+        box-shadow: none;
+        font-size: 90%;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+    #first_col {
+        order: 3;
+        margin: 0 auto;
+    }
+    section{
+        flex: 0 1 75%;
+    }
+}
+
+/* mobile phone in landscape orientation */
+@media only screen and (max-width: 767px) {
+    #mobilemenu {
+        display: block;
+    }
+    #nav_menu {
+        display: none;
+    }
+    .slicknav_menu {
+        background-color: steelblue;
+    }
+    .pagetop {
+        font-size: 250%;
+    }
+    main {
+        flex-direction: column;
+    }
+}
+
+/* notice media queries go in order--gets narrower */
+@media only screen and (max-width: 479px) {
+    header{
+        flex-direction: column;
+    }
+    .pagetop {
+        font-size: 200%;
+    }
 }
